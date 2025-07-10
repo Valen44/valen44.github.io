@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Status Toggle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    #status {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    button {
+      font-size: 16px;
+      margin-right: 10px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="status">
+    Status: <span id="span-agentstatus-text">Available</span>
+  </div>
+  <button onclick="setStatus('On-Call')">Set On-Call</button>
+  <button onclick="setStatus('Available')">Set Available</button>
+
+  <script>
+    function setStatus(text) {
+      document.getElementById('span-agentstatus-text').textContent = text;
+    }
+  </script>
+</body>
+</html>
